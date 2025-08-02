@@ -12,8 +12,8 @@ const Navbar = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const isActive = (path: string) => location.pathname === path;
@@ -27,11 +27,11 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled 
-        ? 'glass shadow-soft backdrop-blur-md' 
-        : 'bg-transparent'
-    }`}>
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled ? "glass shadow-soft backdrop-blur-md" : "bg-transparent"
+      }`}
+    >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -89,15 +89,21 @@ const Navbar = () => {
               className="relative w-12 h-12 rounded-xl hover:bg-primary/10 transition-all duration-300"
             >
               <div className="relative w-6 h-6">
-                <span className={`absolute left-0 w-6 h-0.5 bg-foreground transition-all duration-300 ${
-                  isOpen ? 'rotate-45 top-3' : 'top-1'
-                }`} />
-                <span className={`absolute left-0 w-6 h-0.5 bg-foreground transition-all duration-300 top-3 ${
-                  isOpen ? 'opacity-0' : 'opacity-100'
-                }`} />
-                <span className={`absolute left-0 w-6 h-0.5 bg-foreground transition-all duration-300 ${
-                  isOpen ? '-rotate-45 top-3' : 'top-5'
-                }`} />
+                <span
+                  className={`absolute left-0 w-6 h-0.5 bg-foreground transition-all duration-300 ${
+                    isOpen ? "rotate-45 top-3" : "top-1"
+                  }`}
+                />
+                <span
+                  className={`absolute left-0 w-6 h-0.5 bg-foreground transition-all duration-300 top-3 ${
+                    isOpen ? "opacity-0" : "opacity-100"
+                  }`}
+                />
+                <span
+                  className={`absolute left-0 w-6 h-0.5 bg-foreground transition-all duration-300 ${
+                    isOpen ? "-rotate-45 top-3" : "top-5"
+                  }`}
+                />
               </div>
             </Button>
           </div>
@@ -105,7 +111,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden py-6 space-y-4 animate-slide-down">
+          <div className="lg:hidden py-6 space-y-4 animate-slide-down bg-secondary px-4 rounded-2xl mt-2">
             {navLinks.map((link, index) => (
               <Link
                 key={link.path}

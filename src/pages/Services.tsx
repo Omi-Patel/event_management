@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Search,
   Filter,
@@ -43,7 +44,7 @@ const Services = () => {
       id: "mandap",
       title: "Mandap Decoration",
       description:
-        "Beautiful traditional mandap setups for weddings and ceremonies with fresh flowers, elegant draping, and traditional elements.",
+        "Beautiful traditional mandap setups for weddings and ceremonies with fresh flowers, and traditional elements.",
       fullDescription:
         "Our mandap decoration service creates stunning traditional setups perfect for weddings and religious ceremonies. We use fresh marigold and rose flowers, elegant silk draping, and traditional elements like kalash, coconuts, and decorative items. Each mandap is customized according to your preferences and budget.",
       price: "₹25,000+",
@@ -111,7 +112,13 @@ const Services = () => {
       bookings: 120,
       gradient: "from-yellow-500 to-orange-500",
       icon: Heart,
-      features: ["Flower Garlands", "Diyas", "Rangoli", "Spiritual Elements"],
+      features: [
+        "Flower Garlands",
+        "Diyas",
+        "Rangoli",
+        "Spiritual Elements",
+        "Traditional Elements",
+      ],
     },
     {
       id: "marriage",
@@ -431,11 +438,13 @@ const Services = () => {
                   </div>
 
                   {/* CTA Button */}
-                  <Button className="w-full btn-modern bg-gradient-primary hover:shadow-glow text-white font-semibold rounded-xl">
-                    <Sparkles className="mr-2 w-4 h-4" />
-                    View Details
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
+                  <Link to={`/services/${service.id}`}>
+                    <Button className="w-full btn-modern bg-gradient-primary hover:shadow-glow text-white font-semibold rounded-xl">
+                      <Sparkles className="mr-2 w-4 h-4" />
+                      View Details
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}

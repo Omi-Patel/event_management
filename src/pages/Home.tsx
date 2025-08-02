@@ -51,17 +51,6 @@ const Home = () => {
       features: ["Balloon Arches", "Themed Setup", "Photo Booth"],
     },
     {
-      id: "temple",
-      title: "Temple Decoration",
-      description:
-        "Sacred temple decorations with flowers, diyas, and traditional spiritual elements.",
-      image: templeDecor,
-      price: "₹8,000+",
-      icon: Heart,
-      gradient: "from-yellow-500 to-orange-500",
-      features: ["Flower Garlands", "Diyas", "Rangoli"],
-    },
-    {
       id: "marriage",
       title: "Marriage Decoration",
       description:
@@ -190,7 +179,7 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-8 sm:py-0">
         {/* Background */}
         <div className="absolute inset-0">
           <div
@@ -251,7 +240,7 @@ const Home = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white/30 text-white hover:bg-white hover:text-primary px-8 py-4 text-lg font-semibold rounded-2xl backdrop-blur-sm"
+                  className="border-white/30 text-primary hover:bg-white hover:text-primary px-8 py-4 text-lg font-semibold rounded-2xl backdrop-blur-sm"
                 >
                   <Play className="mr-2 w-5 h-5" />
                   View Services
@@ -267,7 +256,7 @@ const Home = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-5 h-5" />
-                <span>Mumbai, Maharashtra</span>
+                <span>Valoti, Gujarat</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Clock className="w-5 h-5" />
@@ -332,7 +321,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {services.map((service, index) => (
               <Card
                 key={service.id}
@@ -378,7 +367,7 @@ const Home = () => {
                     ))}
                   </div>
 
-                  <Link to={`/services#${service.id}`}>
+                  <Link to={`/services/${service.id}`}>
                     <Button className="w-full btn-modern bg-gradient-primary hover:shadow-glow text-white font-semibold rounded-xl">
                       View Details
                       <ArrowRight className="ml-2 w-4 h-4" />
