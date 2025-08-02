@@ -156,7 +156,7 @@ const Gallery = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-16 bg-secondary/30 rounded-lg p-8">
-          <h2 className="text-3xl font-bold mb-4">Love What You See?</h2>
+                      <h2 className="text-3xl font-bold mb-4">Love What You See?</h2>
           <p className="text-xl text-muted-foreground mb-6">
             Let us create something equally beautiful for your special occasion
           </p>
