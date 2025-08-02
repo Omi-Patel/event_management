@@ -11,7 +11,8 @@ const Navbar = () => {
 
   const navLinks = [
     { path: "/", label: "Home" },
-    { path: "/events", label: "Events" },
+    { path: "/services", label: "Services" },
+    { path: "/gallery", label: "Gallery" },
     { path: "/about", label: "About" },
     { path: "/contact", label: "Contact" },
   ];
@@ -26,7 +27,7 @@ const Navbar = () => {
               <Calendar className="w-5 h-5 text-white" />
             </div>
             <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              EventFlow
+              Shree Ganesh Decoration
             </span>
           </Link>
 
@@ -46,7 +47,7 @@ const Navbar = () => {
               </Link>
             ))}
             <Button className="bg-gradient-primary hover:opacity-90 transition-opacity">
-              Get Started
+              Get Quote
             </Button>
           </div>
 
@@ -80,7 +81,7 @@ const Navbar = () => {
               </Link>
             ))}
             <Button className="w-full bg-gradient-primary hover:opacity-90 transition-opacity">
-              Get Started
+              Get Quote
             </Button>
           </div>
         )}

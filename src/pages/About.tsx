@@ -1,57 +1,75 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Users, Target, Award, Heart, Calendar, Globe } from "lucide-react";
+import { Users, Target, Award, Heart, Calendar, Flower2, Star, Crown } from "lucide-react";
 
 const About = () => {
   const values = [
     {
       icon: Target,
       title: "Our Mission",
-      description: "To simplify event management and help create meaningful connections through exceptional experiences."
-    },
-    {
-      icon: Users,
-      title: "Community First",
-      description: "Building a platform that brings people together and fosters collaboration in every event."
-    },
-    {
-      icon: Award,
-      title: "Excellence",
-      description: "Delivering high-quality tools and services that exceed expectations and drive success."
+      description: "To transform every celebration into a memorable experience through beautiful and creative decorations."
     },
     {
       icon: Heart,
-      title: "Passion",
-      description: "We're passionate about events and committed to helping organizers create amazing experiences."
+      title: "Passion for Beauty",
+      description: "We believe every occasion deserves to be beautiful, and we pour our heart into every decoration."
+    },
+    {
+      icon: Award,
+      title: "Quality Excellence",
+      description: "Using only the finest materials and fresh flowers to ensure superior quality in every project."
+    },
+    {
+      icon: Users,
+      title: "Client First",
+      description: "Our clients' satisfaction is our priority. We listen, understand, and deliver beyond expectations."
     }
   ];
 
   const stats = [
-    { number: "10,000+", label: "Events Hosted" },
-    { number: "500,000+", label: "Happy Attendees" },
-    { number: "50+", label: "Countries Served" },
-    { number: "99%", label: "Customer Satisfaction" },
+    { number: "1000+", label: "Happy Celebrations" },
+    { number: "500+", label: "Satisfied Families" },
+    { number: "10+", label: "Years of Experience" },
+    { number: "15+", label: "Types of Events" },
   ];
 
   const team = [
     {
-      name: "Sarah Johnson",
-      role: "CEO & Founder",
-      description: "Former event coordinator with 15+ years of experience in corporate event management."
+      name: "Rajesh Sharma",
+      role: "Founder & Lead Designer",
+      description: "With 10+ years in decoration industry, specializing in traditional and contemporary designs."
     },
     {
-      name: "Mike Chen",
-      role: "CTO",
-      description: "Tech entrepreneur focused on building scalable platforms that solve real-world problems."
+      name: "Priya Patel",
+      role: "Creative Director",
+      description: "Expert in floral arrangements and color coordination with an eye for aesthetic perfection."
     },
     {
-      name: "Emily Rodriguez",
-      role: "Head of Product",
-      description: "Product designer passionate about creating intuitive user experiences."
+      name: "Vikash Kumar",
+      role: "Operations Manager",
+      description: "Ensures smooth execution of every project with attention to detail and timely delivery."
     },
     {
-      name: "David Park",
-      role: "VP of Sales",
-      description: "Sales leader with extensive experience in the event and hospitality industry."
+      name: "Sunita Devi",
+      role: "Traditional Specialist",
+      description: "Specialist in traditional Indian decorations and religious ceremony setups."
+    }
+  ];
+
+  const specialties = [
+    {
+      icon: Crown,
+      title: "Traditional Expertise",
+      description: "Deep knowledge of Indian traditions and customs in decoration"
+    },
+    {
+      icon: Flower2,
+      title: "Fresh Flowers",
+      description: "Direct sourcing of fresh flowers for vibrant and long-lasting decorations"
+    },
+    {
+      icon: Star,
+      title: "Custom Designs",
+      description: "Personalized decoration designs tailored to your preferences and budget"
     }
   ];
 
@@ -60,10 +78,10 @@ const About = () => {
       <div className="container mx-auto px-4">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl lg:text-5xl font-bold mb-6">About EventFlow</h1>
+          <h1 className="text-4xl lg:text-5xl font-bold mb-6">About Shree Ganesh Decoration</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We're on a mission to revolutionize event management by providing powerful, 
-            intuitive tools that help organizers create unforgettable experiences.
+            For over a decade, we've been dedicated to making celebrations beautiful and memorable 
+            through our passion for creative decoration and attention to detail.
           </p>
         </div>
 
@@ -73,31 +91,30 @@ const About = () => {
             <h2 className="text-3xl font-bold mb-6">Our Story</h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                EventFlow was born out of frustration with complicated event management systems 
-                that made organizing events more difficult than it should be. Our founders, 
-                experienced event organizers themselves, knew there had to be a better way.
+                Shree Ganesh Decoration was founded in 2014 with a simple belief - every celebration 
+                deserves to be beautiful. What started as a small family business has grown into one 
+                of Mumbai's most trusted decoration services.
               </p>
               <p>
-                In 2020, we set out to build a platform that would simplify every aspect of 
-                event management - from initial planning to post-event analytics. We wanted 
-                to create tools that were powerful enough for enterprise clients but simple 
-                enough for first-time event organizers.
+                Our founder, Rajesh Sharma, began this journey with a passion for creating beautiful 
+                spaces that bring joy to people's lives. With experience in traditional Indian 
+                decorations and a keen eye for modern aesthetics, we've successfully decorated 
+                over 1000 celebrations.
               </p>
               <p>
-                Today, EventFlow powers thousands of events worldwide, from intimate workshops 
-                to large-scale conferences. We're proud to be the trusted partner for event 
-                organizers who want to focus on creating amazing experiences rather than 
-                wrestling with technology.
+                Today, Shree Ganesh Decoration is known for our commitment to quality, creativity, 
+                and customer satisfaction. We take pride in being part of your most precious moments 
+                and making them unforgettable through our decorative artistry.
               </p>
             </div>
           </div>
           <div className="relative">
             <div className="bg-gradient-primary rounded-lg p-8 text-white">
               <Calendar className="w-16 h-16 mb-6" />
-              <h3 className="text-2xl font-bold mb-4">Founded in 2020</h3>
+              <h3 className="text-2xl font-bold mb-4">Established 2014</h3>
               <p className="text-white/90">
-                Started by a team of event professionals and technologists who believed 
-                event management could be better, simpler, and more effective.
+                Started with the vision to bring beauty and joy to every celebration through 
+                exceptional decoration services and traditional craftsmanship.
               </p>
             </div>
           </div>
@@ -108,7 +125,7 @@ const About = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Our Values</h2>
             <p className="text-xl text-muted-foreground">
-              The principles that guide everything we do
+              The principles that guide our work and relationships
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -126,12 +143,35 @@ const About = () => {
           </div>
         </div>
 
+        {/* Specialties */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">What Makes Us Special</h2>
+            <p className="text-xl text-muted-foreground">
+              Our unique approach to decoration services
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {specialties.map((specialty, index) => (
+              <Card key={index} className="text-center hover:shadow-card transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="p-8">
+                  <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                    <specialty.icon className="w-10 h-10 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-semibold mb-4">{specialty.title}</h3>
+                  <p className="text-muted-foreground">{specialty.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
         {/* Stats Section */}
         <div className="bg-secondary/30 rounded-lg p-8 mb-16">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold mb-4">EventFlow by the Numbers</h2>
+            <h2 className="text-3xl font-bold mb-4">Our Achievements</h2>
             <p className="text-xl text-muted-foreground">
-              Our impact on the event management industry
+              Numbers that reflect our commitment to excellence
             </p>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -149,7 +189,7 @@ const About = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Meet Our Team</h2>
             <p className="text-xl text-muted-foreground">
-              The passionate people behind EventFlow
+              The talented individuals behind our beautiful decorations
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -170,14 +210,57 @@ const About = () => {
           </div>
         </div>
 
-        {/* Global Reach */}
-        <div className="text-center bg-card rounded-lg p-8">
-          <Globe className="w-16 h-16 text-primary mx-auto mb-6" />
-          <h2 className="text-3xl font-bold mb-4">Global Reach, Local Impact</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            From San Francisco to Singapore, EventFlow empowers event organizers 
-            around the world to create meaningful connections and lasting memories 
-            in their local communities.
+        {/* Our Process */}
+        <div className="bg-card rounded-lg p-8 mb-16">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-4">Our Process</h2>
+            <p className="text-muted-foreground">
+              How we bring your decoration dreams to life
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {[
+              {
+                step: "1",
+                title: "Consultation",
+                description: "We discuss your requirements, preferences, and budget"
+              },
+              {
+                step: "2", 
+                title: "Design",
+                description: "Our team creates a customized decoration plan for your event"
+              },
+              {
+                step: "3",
+                title: "Preparation",
+                description: "We source materials and prepare all decoration elements"
+              },
+              {
+                step: "4",
+                title: "Execution",
+                description: "Our team sets up the decoration and ensures everything is perfect"
+              }
+            ].map((process, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-white">{process.step}</span>
+                </div>
+                <h3 className="text-lg font-semibold mb-2">{process.title}</h3>
+                <p className="text-muted-foreground text-sm">{process.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Vision */}
+        <div className="text-center bg-gradient-primary text-white rounded-lg p-8">
+          <Flower2 className="w-16 h-16 mx-auto mb-6" />
+          <h2 className="text-3xl font-bold mb-4">Our Vision</h2>
+          <p className="text-xl text-white/90 max-w-3xl mx-auto">
+            To be the most trusted and preferred decoration service in India, known for our creativity, 
+            quality, and ability to transform ordinary spaces into extraordinary celebrations that create 
+            lasting memories for families and communities.
           </p>
         </div>
       </div>

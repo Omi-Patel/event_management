@@ -4,8 +4,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Events from "./pages/Events";
-import EventDetails from "./pages/EventDetails";
+import Services from "./pages/Services";
+import Gallery from "./pages/Gallery";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -23,8 +23,8 @@ const App = () => (
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/events/:id" element={<EventDetails />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

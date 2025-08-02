@@ -13,11 +13,11 @@ const Footer = () => {
                 <Calendar className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-                EventFlow
+                Shree Ganesh Decoration
               </span>
             </div>
             <p className="text-muted-foreground text-sm">
-              Professional event management made simple. Create, manage, and promote your events with ease.
+              Professional decoration services for all occasions. Making your celebrations memorable with beautiful decorations.
             </p>
             <div className="flex space-x-4">
               <Facebook className="w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
@@ -34,14 +34,14 @@ const Footer = () => {
               <Link to="/" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
                 Home
               </Link>
-              <Link to="/events" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
-                Events
+              <Link to="/services" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
+                Services
+              </Link>
+              <Link to="/gallery" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
+                Gallery
               </Link>
               <Link to="/about" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
                 About
-              </Link>
-              <Link to="/contact" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
-                Contact
               </Link>
             </div>
           </div>
@@ -50,10 +50,11 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Services</h3>
             <div className="space-y-2">
-              <p className="text-muted-foreground text-sm">Event Planning</p>
-              <p className="text-muted-foreground text-sm">Venue Management</p>
-              <p className="text-muted-foreground text-sm">Registration System</p>
-              <p className="text-muted-foreground text-sm">Analytics & Reports</p>
+              <p className="text-muted-foreground text-sm">Mandap Decoration</p>
+              <p className="text-muted-foreground text-sm">Wedding Decoration</p>
+              <p className="text-muted-foreground text-sm">Birthday Parties</p>
+              <p className="text-muted-foreground text-sm">Temple Decoration</p>
+              <p className="text-muted-foreground text-sm">Event Lighting</p>
             </div>
           </div>
 
@@ -63,15 +64,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-muted-foreground" />
-                <span className="text-muted-foreground text-sm">hello@eventflow.com</span>
+                <span className="text-muted-foreground text-sm">info@shreeganeshdecoration.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-muted-foreground" />
-                <span className="text-muted-foreground text-sm">+1 (555) 123-4567</span>
+                <span className="text-muted-foreground text-sm">+91 98765 43210</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4 text-muted-foreground" />
-                <span className="text-muted-foreground text-sm">San Francisco, CA</span>
+                <span className="text-muted-foreground text-sm">Mumbai, Maharashtra, India</span>
               </div>
             </div>
           </div>
@@ -79,7 +80,7 @@ const Footer = () => {
 
         <div className="border-t mt-8 pt-8 text-center">
           <p className="text-muted-foreground text-sm">
-            © 2024 EventFlow. All rights reserved.
+            © 2024 Shree Ganesh Decoration. All rights reserved.
           </p>
         </div>
       </div>

@@ -1,80 +1,81 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Calendar, Users, Trophy, Star, CheckCircle } from "lucide-react";
+import { ArrowRight, Star, Users, Award, Calendar, Flower2, Sparkles, Heart, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import EventCard from "@/components/EventCard";
-import heroImage from "@/assets/hero-image.jpg";
-import event1 from "@/assets/event1.jpg";
-import event2 from "@/assets/event2.jpg";
-import event3 from "@/assets/event3.jpg";
+import heroImage from "@/assets/hero-decoration.jpg";
+import birthdayDecor from "@/assets/birthday-decoration.jpg";
+import templeDecor from "@/assets/temple-decoration.jpg";
+import marriageDecor from "@/assets/marriage-decoration.jpg";
 
 const Home = () => {
-  const featuredEvents = [
+  const services = [
     {
-      id: "1",
-      title: "Tech Innovation Summit 2024",
-      description: "Join industry leaders for the latest in technology and innovation. Network with professionals and discover cutting-edge solutions.",
-      date: "March 15, 2024",
-      time: "9:00 AM - 6:00 PM",
-      location: "San Francisco Convention Center",
-      price: "$299",
-      category: "Technology",
-      attendees: 245,
-      maxAttendees: 500,
-      image: event1,
+      id: "mandap",
+      title: "Mandap Decoration",
+      description: "Beautiful traditional mandap setups for weddings and ceremonies with flowers and elegant draping.",
+      image: heroImage,
+      price: "₹25,000+"
     },
     {
-      id: "2",
-      title: "Digital Marketing Masterclass",
-      description: "Learn advanced digital marketing strategies from experts. Perfect for marketers looking to enhance their skills.",
-      date: "March 22, 2024",
-      time: "10:00 AM - 4:00 PM",
-      location: "Downtown Business Center",
-      price: "$149",
-      category: "Marketing",
-      attendees: 89,
-      maxAttendees: 150,
-      image: event2,
+      id: "birthday",
+      title: "Birthday Party Decoration",
+      description: "Colorful and fun birthday decorations with balloons, themes, and customized setups.",
+      image: birthdayDecor,
+      price: "₹5,000+"
     },
     {
-      id: "3",
-      title: "Startup Networking Night",
-      description: "Connect with fellow entrepreneurs and investors. Build meaningful relationships in the startup ecosystem.",
-      date: "March 28, 2024",
-      time: "6:00 PM - 10:00 PM",
-      location: "Innovation Hub",
-      price: "Free",
-      category: "Networking",
-      attendees: 156,
-      maxAttendees: 200,
-      image: event3,
+      id: "temple",
+      title: "Temple Decoration",
+      description: "Sacred temple decorations with flowers, diyas, and traditional spiritual elements.",
+      image: templeDecor,
+      price: "₹8,000+"
     },
+    {
+      id: "marriage",
+      title: "Marriage Decoration",
+      description: "Complete wedding decoration services including venue, stage, and photo booth setups.",
+      image: marriageDecor,
+      price: "₹50,000+"
+    }
   ];
 
   const stats = [
-    { icon: Calendar, label: "Events Created", value: "5,000+" },
-    { icon: Users, label: "Happy Attendees", value: "250,000+" },
-    { icon: Trophy, label: "Success Rate", value: "98%" },
-    { icon: Star, label: "Average Rating", value: "4.9/5" },
+    { icon: Users, label: "Happy Clients", value: "500+" },
+    { icon: Calendar, label: "Events Decorated", value: "1000+" },
+    { icon: Star, label: "Years Experience", value: "10+" },
+    { icon: Award, label: "Awards Won", value: "5" },
   ];
 
   const features = [
     {
-      title: "Easy Event Creation",
-      description: "Create and customize your events in minutes with our intuitive interface."
+      icon: Flower2,
+      title: "Fresh Flowers",
+      description: "We use only the freshest flowers for all our decorations to ensure vibrant and beautiful setups."
     },
     {
-      title: "Registration Management",
-      description: "Handle attendee registration and payments seamlessly."
+      icon: Sparkles,
+      title: "Creative Designs",
+      description: "Our team creates unique and creative designs tailored to your specific event and preferences."
     },
     {
-      title: "Real-time Analytics",
-      description: "Track your event performance with detailed analytics and insights."
+      icon: Heart,
+      title: "Personal Touch",
+      description: "Every decoration is crafted with love and attention to detail to make your event special."
     },
     {
-      title: "Marketing Tools",
-      description: "Promote your events with built-in marketing and social media tools."
+      icon: CheckCircle,
+      title: "Quality Service",
+      description: "We pride ourselves on delivering high-quality decoration services within your budget and timeline."
     }
+  ];
+
+  const specialServices = [
+    "Garba Night Decoration",
+    "Rakhi Festival Setup",
+    "Corporate Event Decoration", 
+    "Anniversary Celebration",
+    "Housewarming Ceremony",
+    "Festival Decoration"
   ];
 
   return (
@@ -88,22 +89,22 @@ const Home = () => {
         ></div>
         <div className="relative container mx-auto px-4 text-center text-white">
           <h1 className="text-4xl lg:text-6xl font-bold mb-6 animate-fade-in">
-            Create Amazing Events
+            Shree Ganesh Decoration
             <br />
-            <span className="text-white/90">That People Love</span>
+            <span className="text-white/90">Making Celebrations Beautiful</span>
           </h1>
           <p className="text-xl lg:text-2xl mb-8 text-white/90 max-w-3xl mx-auto animate-slide-up">
-            Professional event management made simple. From conferences to workshops, 
-            create memorable experiences that engage and inspire your audience.
+            Professional decoration services for all your special occasions. From traditional mandaps 
+            to modern birthday parties, we create magical moments that last a lifetime.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up">
             <Button size="lg" className="bg-white text-primary hover:bg-white/90 px-8 py-3">
-              Start Creating Events
+              Get Free Quote
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <Link to="/events">
+            <Link to="/services">
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary px-8 py-3">
-                Browse Events
+                View Services
               </Button>
             </Link>
           </div>
@@ -127,30 +128,47 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Featured Events */}
+      {/* Featured Services */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Featured Events</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Our Popular Services</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Discover upcoming events that match your interests and professional goals.
+              Discover our most sought-after decoration services for every celebration
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {featuredEvents.map((event, index) => (
-              <EventCard 
-                key={event.id} 
-                event={event} 
-                className="animate-fade-in"
-              />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            {services.map((service, index) => (
+              <Card key={service.id} className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
+                <div className="relative overflow-hidden rounded-t-lg">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-bold text-primary">
+                    {service.price}
+                  </div>
+                </div>
+                
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                  <p className="text-muted-foreground text-sm mb-4">{service.description}</p>
+                  <Link to={`/services#${service.id}`}>
+                    <Button className="w-full bg-gradient-primary hover:opacity-90 transition-opacity">
+                      View Details
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
             ))}
           </div>
 
           <div className="text-center">
-            <Link to="/events">
+            <Link to="/services">
               <Button size="lg" className="bg-gradient-primary hover:opacity-90">
-                View All Events
+                View All Services
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
@@ -158,13 +176,36 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Special Services */}
       <section className="py-16 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Why Choose EventFlow?</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">We Also Specialize In</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Everything you need to create, manage, and promote successful events.
+              Additional services to make every occasion memorable
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {specialServices.map((service, index) => (
+              <Card key={index} className="text-center hover:shadow-card transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="p-4">
+                  <Sparkles className="w-8 h-8 text-primary mx-auto mb-2" />
+                  <p className="text-sm font-medium">{service}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Why Choose Shree Ganesh Decoration?</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Quality, creativity, and dedication in every decoration we create
             </p>
           </div>
           
@@ -172,9 +213,61 @@ const Home = () => {
             {features.map((feature, index) => (
               <Card key={index} className="text-center hover:shadow-card transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="p-6">
-                  <CheckCircle className="w-12 h-12 text-primary mx-auto mb-4" />
+                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
                   <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
                   <p className="text-muted-foreground">{feature.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-16 bg-secondary/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">What Our Clients Say</h2>
+            <p className="text-xl text-muted-foreground">
+              Hear from our satisfied customers about their experiences
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Priya Sharma",
+                event: "Wedding Decoration",
+                review: "Absolutely stunning mandap decoration! The team exceeded our expectations and made our wedding day magical.",
+                rating: 5
+              },
+              {
+                name: "Rajesh Patel",
+                event: "Birthday Party",
+                review: "Amazing birthday decoration for my daughter. She was so happy with the colorful and creative setup!",
+                rating: 5
+              },
+              {
+                name: "Meera Singh",
+                event: "Temple Festival",
+                review: "Beautiful temple decoration for Ganesh Chaturthi. The team understood our traditional requirements perfectly.",
+                rating: 5
+              }
+            ].map((testimonial, index) => (
+              <Card key={index} className="hover:shadow-card transition-all duration-300">
+                <CardContent className="p-6">
+                  <div className="flex mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground mb-4 italic">"{testimonial.review}"</p>
+                  <div>
+                    <p className="font-semibold">{testimonial.name}</p>
+                    <p className="text-sm text-muted-foreground">{testimonial.event}</p>
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -187,15 +280,24 @@ const Home = () => {
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-              Ready to Create Your Next Event?
+              Ready to Make Your Event Special?
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Join thousands of event organizers who trust EventFlow to deliver exceptional experiences.
+              Contact us today for a free consultation and quote for your upcoming celebration.
             </p>
-            <Button size="lg" className="bg-gradient-primary hover:opacity-90 px-8 py-3">
-              Get Started Today
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-gradient-primary hover:opacity-90 px-8 py-3">
+                <Link to="/contact" className="flex items-center">
+                  Get Free Quote
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="px-8 py-3">
+                <Link to="/gallery">
+                  View Our Work
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
